@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAPUN KI GAADI</title>
+</head>
+<style>
+    .container{
+        display: flex;  
+        padding: 10px;
+        align-items: center;
+        background-color: black;
+        height: 625px;
+        width: 100%;
+        z-index: -1;
+    }
+
+     #wheel1{
+        position: relative;
+        top: 31px;
+        left: 50px;
+        animation: animate1 3s ease infinite;
+    }
+     @keyframes animate1 {
+        0%,100%{
+            transform: rotate(0deg);
+            left: 50px
+            
+        }
+        50%{
+            transform: rotate(360deg);
+            left: 950px;
+        }
+        
+    }   
+    #wheel2{
+        position: relative;
+        top: 32px;
+        left: 180px;
+        animation: animate2 3s ease infinite;        
+    }
+     @keyframes animate2 {
+        0%,100%{
+            transform: rotate(0deg);
+            left: 180px
+            
+        }
+        50%{
+            transform: rotate(360deg);
+            left: 1080px;
+        }
+        
+    }   
+    .wheel{
+       
+        background-color: blanchedalmond;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 18px double #12b193;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-family: cursive;
+        z-index: 2;
+
+    }
+
+    button{
+        background-color: black;
+        height: 49px;
+        width: 160px;
+        font-size: 18px;
+        position: relative;
+        top: 185px;
+        left: 431px;
+        border: 11px double black;
+        font-family: cursive;
+        background: #cec7c7;
+        border-radius: 20px;
+    }
+    .carbody{
+        display: flex;
+        border-top-left-radius: 120px;
+        border-top-right-radius: 123px;
+        border-bottom-left-radius: 27px;
+        border-bottom-right-radius: 27px;
+        height: 167px;
+        width: 454px;
+        z-index: 1;
+        background-color: #bd611f;
+        box-sizing: border-box;
+        border: 4px solid gray;
+        position: relative;
+        bottom: 41px;
+        right: 363px;
+         animation: animate3 3s ease infinite; 
+    }
+      @keyframes animate3 {
+        0%,100%{
+            right: 363px;
+        }
+        50%{
+            right: -520px;
+        }
+    } 
+    hr{
+        width: 1341px;
+        position: fixed;
+        top: 384px;
+        left: 0px;
+    }
+    .window{
+        height: 100px;
+        width: 150px;
+        background-color: gray;
+        border: 3px solid black;
+    }
+    #window1{
+        border-top-left-radius: 100px;
+    height: 74px;
+    width: 115px;
+    position: relative;
+    top: 6px;
+    left: 26px;
+    margin-right: 29px;
+    }
+    #window2{
+        position: relative;
+        top: 6px;
+        height: 74px;
+    }
+    #window3{
+        border-top-right-radius: 100px;
+    height: 74px;
+    width: 115px;
+    position: relative;
+    top: 6px;
+    left: -27px;
+    margin-left: 29px;
+    }
+.flash{
+    height: 35px;
+    width: 105px;
+    border: 0px solid white;
+    z-index: 0;
+    transform: rotate(13deg);
+    position: relative;
+    right: 390px;
+    top: 32px;
+    background-image: linear-gradient(67deg, yellow , transparent);
+    animation: animate3 3s ease infinite;
+}
+@keyframes animate3 {
+    0%,100%{
+            right: 363px;
+        }
+        50%{
+            right: -520px;
+        }
+}
+</style>
+<body>
+    <div class="container">
+        
+        <div class="wheel" id="wheel1" >WHEEL</div>
+        <div class="wheel" id="wheel2">WHEEL</div>
+         <button onclick="rotate()">Click to rotate</button> 
+        <div class="carbody">
+        <div class="window" id="window1"></div>
+        <div class="window" id="window2"></div>
+        <div class="window" id="window3"></div>
+        <hr>
+        
+        </div>
+      
+        <div class="flash"></div>
+    </div>
+
+   
+</body>
+</html>
